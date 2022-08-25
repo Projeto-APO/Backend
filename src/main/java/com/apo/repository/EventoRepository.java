@@ -1,5 +1,6 @@
 package com.apo.repository;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,6 +14,6 @@ public interface EventoRepository extends JpaRepository<Evento, Long>{
 
 	public List<Evento> findAllByTituloContainingIgnoreCase(@Param("Evento") String titulo);
 	public List<Evento> findAllByCategoriaContainingIgnoreCase(@Param("Evento") String categoria);
-	public List<Evento> findAllByDataContainingIgnoreCase(@Param("Evento") String data);
+	public List<Evento> findByData(Date data);
 	
-}
+	}

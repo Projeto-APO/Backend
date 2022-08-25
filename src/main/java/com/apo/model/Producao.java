@@ -1,6 +1,6 @@
 package com.apo.model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +24,7 @@ public class Producao {
 	private String nome;
 	
 	@NotBlank
-	private LocalDateTime dataPlantio;
+	private Date dataPlantio;
 	
 	@NotBlank
 	private Integer quantidade;
@@ -53,11 +53,11 @@ public class Producao {
 		this.nome = nome;
 	}
 
-	public LocalDateTime getDataPlantio() {
+	public Date getDataPlantio() {
 		return dataPlantio;
 	}
 
-	public void setDataPlantio(LocalDateTime dataPlantio) {
+	public void setDataPlantio(Date dataPlantio) {
 		this.dataPlantio = dataPlantio;
 	}
 
